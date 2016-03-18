@@ -1,0 +1,31 @@
+{
+  "name": "fcc-vote-jamie",
+  "version": "1.0.0",
+  "description": "A Freecodecamp fullstack project",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.7",
+    "multer": "^1.1.0",
+    "nodemon": "^1.9.1",
+    "passport": "^0.3.2",
+    "passport-github": "^1.1.0",
+    "dotenv": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamieRez/FCC-Voting-App.git"
+  },
+  "author": "Jamie Rezendes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamieRez/FCC-Voting-App/issues"
+  },
+  "homepage": "https://github.com/JamieRez/FCC-Voting-App#readme"
+}
