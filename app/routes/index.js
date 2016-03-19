@@ -6,8 +6,11 @@ var app = express();
 
 app.set('port', (process.env.PORT || 8080));
 
+app.use(express.static('./public/css'));
+
 	app.route('/').get(function (req, res) {
 		res.sendFile(path + '/public/index.html');
+		
 	});
 		
 

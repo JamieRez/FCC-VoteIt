@@ -1,3 +1,22 @@
-h1{
-    color : red;
+.jumbotron{
+    text-align: center;
+    background-color : #B0E2F7;
+    color : white;
+    text-shadow: 1px 1px #000;
+}
+
+.navbar-brand{
+    font-size: 250%;
+}
+
+.navbar-default .navbar-brand {
+    color: #B8FFD1;
+    text-shadow : -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #8DF2B0;
 }
