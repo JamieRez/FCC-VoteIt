@@ -31,21 +31,23 @@ body{
 }
 
 .signup-box{
-    width : 25%;
-    padding: 15% 15% 10% 15%;
+    max-width : 75%;
+    width : 500px;
+    height : 600px;
+    max-height : 75%;
     background-color : #F7F7F7;
     border : 2px solid #939393;
     box-shadow : 0px 0px 5px #000;
-    margin : auto;
+    margin : 70vmax auto auto auto;
+    text-align : center;
     border-radius : 3%;
     position : relative;
-    top : 100vh;
     overflow-y: hidden;
-    display : none;
+    display : block;
 }
 
 .sign-text{
-    text-align: center;
+    margin: auto;
 }
 
  .navbar-default{

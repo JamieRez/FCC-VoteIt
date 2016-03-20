@@ -6,7 +6,7 @@ $(document).ready(function(){
             signClicked = true;
             $('.signup-box').css('display' , 'block');
             $( ".signup-box" ).animate({
-                    top : "-15vh"
+                    marginTop : "-5vmax"
                 }, 500, function() {
                 // Animation complete.
             });
