@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Alpha54;
+    src: url(Alpha54.ttf);
+}
+
+body{
+    overflow : hidden;
+    background-color : #D7FEFD;
+}
+
 .jumbotron{
     text-align: center;
     background-color : #B0E2F7;
@@ -10,13 +20,34 @@
 }
 
 .navbar-default .navbar-brand {
-    color: #B8FFD1;
-    text-shadow : -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+    color: #15A252;
+    font-family: Alpha54;
+    font-weight : lighter;
 }
 
+
 .navbar-default .navbar-brand:hover {
-    color: #8DF2B0;
+    color: #087736;
+}
+
+.signup-box{
+    width : 25%;
+    padding: 15% 15% 10% 15%;
+    background-color : #F7F7F7;
+    border : 2px solid #939393;
+    box-shadow : 0px 0px 5px #000;
+    margin : auto;
+    border-radius : 3%;
+    position : relative;
+    top : 100vh;
+    overflow-y: hidden;
+    display : none;
+}
+
+.sign-text{
+    text-align: center;
+}
+
+ .navbar-default{
+    background-color : #E5F9F9;
 }

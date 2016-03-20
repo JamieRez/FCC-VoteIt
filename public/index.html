@@ -8,8 +8,6 @@
 		<!--This CSS file is not linking up right -->
 		
 		
-		<script src="../server.js"></script>
-		
 		
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -17,6 +15,10 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		
+		<!--Jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		
+
 		<link type="text/css" rel="stylesheet" href="main.css">
 
 	</head>
@@ -25,11 +27,11 @@
 	<body>
 		<nav class="navbar navbar-default navbar-static-top">
   			<div class="container">
-  				<h1 class ='nav navbar-nav navbar-brand'>Vote It</h1>
+  				<a href ='/'><h1 class ='nav navbar-nav navbar-brand'>Vote it</h1></a>
   				<ul class="nav navbar-nav navbar-right">
-    				<li><a href="#">Home</a></li>
-    				<li><a href="#">Polls</a></li>
-    				<li><a href="#">Sign Up</a></li>
+    				<li><a href="/">Home</a></li>
+    				<li><a href="polls">Polls</a></li>
+    				<li><a href="#" name='signup'>Sign Up</a></li>
     				<li><a href="#">Login</a></li>
     			</ul>
   			</div>
@@ -38,8 +40,14 @@
 		<div class="jumbotron">
   			<h1>Let's Take a Vote</h1>
   			<p>Sign Up to Make Your Own Polls</p>
-  			<p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a></p>
+  			<p><a class="btn btn-primary btn-lg" href="#" role="button" name="signup">Sign Up</a></p>
 		</div>
+		
+		<div class = 'signup-box'>
+			<h1>Hello</h1>
+		</div>
+		
+		<script src="main.js"></script>
 		
 	</body>
 
