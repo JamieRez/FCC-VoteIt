@@ -5,7 +5,6 @@ var path = process.cwd();
 
 module.exports = function(express,app, passport){
 
-app.set('port', (process.env.PORT || 8080));
 
 app.use(express.static('./public/css'));
 app.use(express.static('./views'));

@@ -16,6 +16,7 @@ mongoose.connect(configDB.url); // connect to our database
 require('./config/passport.js')(passport);
 
 app.set('view engine', 'ejs');
+app.set('port', (process.env.PORT || 8080));
 
 // required for passport
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
