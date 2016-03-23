@@ -1,39 +1,53 @@
 'use strict';
 
 var path = process.cwd();
-var express = require('express');
-var app = express();
+
+
+module.exports = function(express,app, passport){
 
 app.set('port', (process.env.PORT || 8080));
 
 app.use(express.static('./public/css'));
-app.use(express.static('./public/views'));
+app.use(express.static('./views'));
+
+
+
 
 	app.route('/').get(function (req, res) {
-		res.sendFile(path + '/public/views/index.html');
+		res.sendFile(path + '/views/index.html');
 		
 	});
 	
 	app.route('/signup').get(function (req, res) {
-		res.sendFile(path + '/public/views/signup.html');
+		res.render('signup.ejs', { message: req.flash('signupMessage') });
 		
 	});
 	
 	app.route('/polls').get(function (req, res) {
-		res.sendFile(path + '/public/views/polls.html');
+		res.sendFile(path + '/views/polls.html');
 		
 	});
 	
 	app.route('/login').get(function (req, res) {
-		res.sendFile(path + '/public/views/login.html');
+		res.sendFile(path + '/views/login.html');
 		
 	});
 	
-	app.post('/signupSubmit' , function(req,res){
-		console.log(res);
-	})
+	 app.post('/signup', passport.authenticate('local-signup', {
+        successRedirect :'/', // redirect to the secure profile section
+        failureRedirect :'/signup', // redirect back to the signup page if there is an error
+        failureFlash : true // allow flash messages
+    }));
+	
 		
+	function isLoggedIn(req, res, next) {
 
-	app.listen(app.get('port'), function(req,res){
-    	console.log("Listening on port " + app.get('port'));
-	});
+    // if user is authenticated in the session, carry on 
+    if (req.isAuthenticated())
+        return next();
+
+    // if they aren't redirect them to the home page
+    res.redirect('/');
+}
+
+};
