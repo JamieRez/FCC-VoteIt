@@ -1,5 +1,3 @@
 module.exports = {
-
-    'url' : 'mongodb://localhost:27017/votingapp' 
-
-};
+    'url' : 'mongodb://jamierez:yes@jello.modulusmongo.net:27017/mEgewo6x'
+}

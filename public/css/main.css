@@ -58,6 +58,8 @@ body{
     font-weight : 200;
 }
 
+
+
 .footer{
     width : 100%;
     height : 100%;
@@ -80,3 +82,103 @@ body{
      margin : auto;
      max-width : 90%;
  }
+
+.btn{
+    margin-left : 2px;
+    margin-right : 2px;
+}
+ 
+#publicPolls {
+    text-shadow: 1px 1px #000;
+}
+
+#questions {
+    width : 100%;
+}
+
+.choices{
+    margin-bottom : 5px;
+}
+
+#newChoicePos{
+    margin-top : 5px;
+}
+
+#origChoice{
+    display : none;
+}
+
+
+#pollList{
+    margin-top : 5px;
+    text-shadow: 0px 0px #000;
+    font-weight : bold;
+    width : 75%;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+#createBtn{
+    width : 500px;
+    max-width : 75%;
+    margin-left: auto;
+    margin-right : auto;
+    margin-bottom : 10px;
+}
+
+.indexBtn{
+    margin-bottom : 5px;
+}
+
+#pollJumbo{
+    background-color: #04979F;
+    margin : auto;
+    text-align: center;
+    color : white;
+    text-shadow: 1px 1px #000;
+}
+
+#pollQuestion{
+    font-size : 300%;
+}
+
+.choiceText{
+    text-shadow: 0px 0px #000;
+    font-weight: bold;
+    color : black;
+    margin-left : auto;
+    margin-right : auto;
+    width : 75%;
+}
+
+#choiceList{
+    width : 75%;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.myChart{
+    width : 500px;
+    max-width : 80%;
+    margin-left : auto;
+    margin-right : auto;
+    color : white;
+}
+
+#twitterBtn{
+    margin : 10px auto 5px auto;
+    text-shadow: 0px 0px #000;
+    font-weight: bold;
+}
+
+#myPoll{
+    font-weight : bold;
+    padding-bottom : 0.75%;
+}
+
+#newChoice{
+    margin-top : 5px;
+    width : 75%;
+    margin-left : auto;
+    margin-right : auto;
+}
