@@ -1,0 +1,29 @@
+extends ./layout.jade
+
+
+block content
+ #pollJumbo.jumbotron
+  p#pollQuestion=Poll.question
+  
+  if(!voted)
+   #choiceList.list-group
+   form(action='/poll/' + Poll.num , method='post')
+    each choice in Poll.choices
+     button.choiceText.list-group-item.text-center.block-center(type='submit' value=choice name='choice_id')=choice.name
+   form(action='/poll/createChoice/' + Poll.num, method='post')
+    input#newChoice.choice.form-control(type='text', name='NewChoice', placeholder = 'Add Your Own Choice')
+     
+  if(voted)
+   #choiceList.list-group
+    each choice in Poll.choices
+     li.choiceText.list-group-item.text-center.block-center(type='submit' value=choice name='choice_id')=choice.name
+   div.myChart
+    canvas#myChart
+   script(type="text/javascript" src ='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js')
+   script(type='text/javascript').
+    var myPoll =!{JSON.stringify(Poll)}
+   script(src='/chartJq.js')
+   if(user)
+    a.twitter-share-button(href='https://twitter.com/share', data-text='Vote it up!') Tweet
+    script.
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

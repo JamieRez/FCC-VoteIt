@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    title Voting App!
+    meta(name='viewport', content='width=device-width, height = device-height , initial-scale==1')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    block javascriptSrc
+     script(src='/main.js')
+    link(type='text/css', rel='stylesheet', href='/css/main.css')
+    
+  body
+    nav.navbar.navbar-default.navbar-static-top
+      .container
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href='/')
+          h1.nav.navbar-nav.navbar-brand Vote it
+        .navbar-collapse.collapse
+        
+          ul.nav.navbar-nav.navbar-right
+           
+            block homeActive
+             li#home.active
+              a(href='/') Home
+        
+            block pollsActive
+             li
+              a(href='/polls') Polls
+            
+            
+            if (!user)
+             li
+              a(href='/signup', name='signup') Sign Up
+            
+            if (user)
+             li
+              a(href='/myPolls')= "Logged in as " + user.local.email
+            if (!user)
+             li
+              a(href='/login') Login
+              
+        
+    block content
+              
+    .footer
+      a(href='https://www.freecodecamp.com/jamierez', target='blank')
+        p © 2016 Jamie Rezendes

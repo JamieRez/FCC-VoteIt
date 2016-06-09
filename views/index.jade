@@ -1,0 +1,20 @@
+extends ./layout.jade
+             
+block content
+    if(!user)         
+     #jumbo1.jumbotron
+      h1 Let's Take a Vote
+      p Sign Up to Make Your Own Polls
+      p
+        a.btn.btn-primary.btn-lg(href='/signup', role='button', name='signup') Sign Up
+    
+    #jumbo2.jumbotron
+      h1 See What People Say
+      p Take a Look at Some Polls
+      p
+      if(user)
+        a.indexBtn.btn.btn-info.btn-lg(href='myPolls', role='button', name='myPolls') My Polls
+        a.indexBtn.btn.btn-success.btn-lg(href='createPoll', role='button', name='myPolls') Create A Poll
+        
+      a.btn.btn-info.btn-lg(href='polls', role='button', name='polls') View Polls
+      

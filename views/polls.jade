@@ -1,0 +1,18 @@
+extends ./layout.jade
+
+block homeActive
+ li
+  a(href='/') Home
+
+block pollsActive
+ li.active
+  a(href='/polls') Polls
+  
+block content
+ div#publicPolls
+  if(user)
+   a#createBtn.btn.btn-success.btn-lg.center-block(href='createPoll', role='button', name='myPolls') Create A Poll
+  if(Polls)
+   #pollList.list-group
+    each poll in Polls
+     a#origPoll.list-group-item.text-center(href='/poll/' + poll.num)=poll.question

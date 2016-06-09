@@ -4,7 +4,7 @@ var path = process.cwd();
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var port = 8080;
+var port = process.env.PORT || 8080;
 var passport = require('passport');
 var flash    = require('connect-flash');
 var morgan       = require('morgan');
@@ -122,4 +122,4 @@ app.use(express.static('./node_modules/chart.js/src'));
 	
 	app.listen(port, function(){
 		console.log('Listening on port ' + port);
-	})
+	});

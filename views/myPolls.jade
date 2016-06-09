@@ -1,0 +1,15 @@
+extends ./layout.jade
+
+block homeActive
+ li
+  a(href='/') Home
+
+block pollsActive
+ li
+  a(href='/polls') Polls
+  
+block content
+ each poll in polls
+  form(action='/deletePoll/' + poll.num , method='post')
+   a#myPoll.list-group-item.text-center.col-xs-9(href='/poll/' + poll.num)=poll.question
+   button.btn.btn-danger.btn-lg.col-xs-2(type='submit' value=poll name='poll_id') Delete
