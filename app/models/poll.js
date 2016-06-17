@@ -111,7 +111,7 @@ function deleter(){
     });
   });
   pollsArr = [];
-  pollNum = 1;
+  pollNum = 0;
 }
 
 module.exports = {create , deleter, getPolls, getPollFromNum , addVote , getUserPolls , deletePoll};
